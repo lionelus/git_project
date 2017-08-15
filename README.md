@@ -26,12 +26,12 @@ This program will produce a set of graphs and statistic files and a report in pd
 * 3.[Output](#output) 
 
 <a name="get-toulligqc"></a>
-## Get ToulligQC 
+## 1. Get ToulligQC 
 <a name="docker"></a>
-### 1. Docker
+### 1.1 Docker
 ToulligQC and its dependencies are available through a Docker image. To install docker on your system, go to the Docker website. Even if Docker can run on Windows or macOS virtual machines, we recommend to run ToulligQC on a Linux host. 
 <a name="docker-image-recovery"></a>
-#### 1.1 Docker image recovery
+#### * Docker image recovery
 An image of ToulligQC is hosted on the Docker hub on the genomicpariscentre repository(genomicpariscentre/toulligqc).
 ` docker push`
 <a name="launching-docker-image-with-a-shell-script"></a>
@@ -48,6 +48,7 @@ Example:<br>
  -v /path/to/fastq/directory
  -v /path/to/design/file/direcotory/
  -v /path/to/configuration/file/directory
+ (-v /path/to/sequencing/summary/file) if not include in fastq file directory
  toulligqc:latest `
  
  <a name="local-installation"></a>
@@ -69,7 +70,7 @@ On Debian/Ubuntu, you can install requirements using the 'apt-get' command, here
 
 `$sudo apt-get install matplotlib`
 
- If you have ananconda installed you have already these software installed except h5py.
+ If you have ananconda installed you have already these software installed excepted h5py.
 
 <a name="usage"></a>
 ## 2. Usage
@@ -119,8 +120,7 @@ Example with optional arguments:
 `python3 toulligqc.py -n FAF0256 -b -c /path/to/configuration/file/`
 
 Example with optional arguments but no config file:
-python 
- You will run ToulligQC as following: 
+
 `python3 toulligqc.py -n FAF0256 -b -f /path/to/fast5/source -a /path/to/albacore/summary/source -q /path/to/fastq/source -o /path/to/output/directory -s /path/to/sample/sheet`
 
 <a name="configuration-file"></a>
