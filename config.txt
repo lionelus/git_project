@@ -1,0 +1,12 @@
+[config]
+fast5.directory=/Users/lionelferrato/Documents/git
+albacore.summary.directory=/Users/lionelferrato/log_file
+fastq.directory=/Users/lionelferrato/FAF04250_fastq
+result.directory=/Users/lionelferrato/result_directory
+design.file.directory = /Users/lionelferrato/Documents/git/toulligQC/design.csv
+[extension]
+fast5.file.extension=tar.bz2
+fastq.file.extension=bz2
+
+
+
