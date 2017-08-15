@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     python3-tk -y\
     python3-h5py\
     python3-seaborn\
-    python3-numpy\
+    python3-numpy
 
 RUN pip3 install pandas
  
