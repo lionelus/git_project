@@ -56,7 +56,7 @@ This option is also suitable if you are interested in further developing the pac
 
 `git clone https://github.com/GenomicParisCentre/toulligQC.git`
 
-**Requirements**
+* **Requirements**
 
 To run ToulligQC without Docker, you need to install the following software:
 * matplotlib
@@ -126,13 +126,13 @@ A configuration file can be used, the required informations has to be defined as
 
 `[config]`
 
-`fast5.directory=/path/to/fast5/directory (containing either FAST5, FAST5.tar.gz or FAST5.tar.bz2 files)`
+`fast5.directory=/path/to/fast5/directory/ (containing either FAST5, FAST5.tar.gz or FAST5.tar.bz2 files)`
 
-`albacore_summary_directory=/path/to/albacore/summary/txt`
+`albacore_summary_directory=/path/to/albacore/sequencing/summary/directory/or/file`
 
-`result.directory =/path/to/result/directory(file where the results are stored)`
+`result.directory =/path/to/result/directory/(directory where the results are stored)`
 
-`fastq.directory=/path/to/fastq/directory` (containing either FASTQ or FASTQ.bz2 files)
+`fastq.directory=/path/to/fastq/directory//` (containing either FASTQ or FASTQ.bz2 files)
 
 `design.file.directory==/path/to/sample/sheet`
 
@@ -153,6 +153,7 @@ for FASTQ file : bz2, gz (?), fastq
 A sample sheet is required if barcodes were used. The sample sheet file describes the different samples and their corresponding barcodes. The **Index column is mandatory** and  must contain the Oxford Nanopore Technology **barcode number**. For example **01, 02, 11**. The **other columns are optional** but can be useful to define your samples for the following analyses. They can be modified at your convenience.
 
 design.csv example:
+
 index | Reads | 
 ------- | ------- 
  2015341_BC01 | dnacpc14_20170328_FNFAF04250_MN17734_mux_scan_1D_validation_test1_45344_barcode01_template.fastq.bz2 
