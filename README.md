@@ -132,13 +132,13 @@ A configuration file can be used, the required informations has to be defined as
 
 `fast5.directory=/path/to/fast5/directory/ (containing either FAST5, FAST5.tar.gz or FAST5.tar.bz2 files)`
 
-`albacore_summary_directory=/path/to/albacore/sequencing/summary/directory/or/file`
+`albacore.summary.directory=/path/to/albacore/sequencing/summary/directory/or/file`
 
 `result.directory =/path/to/result/directory/(directory where the results are stored)`
 
-`fastq.directory=/path/to/fastq/directory//` (containing either FASTQ or FASTQ.bz2 files)
+`fastq.directory=/path/to/fastq/directory/` (containing either FASTQ or FASTQ.bz2 files)
 
-`design.file.directory==/path/to/sample/sheet`
+`design.file=/path/to/sample/sheet`
 
 `[extension]`
 
