@@ -31,7 +31,7 @@ This program will produce a set of graphs and statistic files and a report in pd
 ### 1.1 Docker
 ToulligQC and its dependencies are available through a Docker image. To install docker on your system, go to the Docker website. Even if Docker can run on Windows or macOS virtual machines, we recommend to run ToulligQC on a Linux host. 
 <a name="docker-image-recovery"></a>
-#### * Docker image recovery
+* ####  Docker image recovery
 An image of ToulligQC is hosted on the Docker hub on the genomicpariscentre repository(genomicpariscentre/toulligqc).
 ` docker push`
 <a name="launching-docker-image-with-a-shell-script"></a>
@@ -134,7 +134,7 @@ A configuration file can be used, the required informations has to be defined as
 
 `albacore_summary_directory=/path/to/albacore/sequencing/summary/directory/or/file`
 
-`result.directory =/path/to/result/directory/(directory where the results are stored)
+`result.directory =/path/to/result/directory/(directory where the results are stored)`
 
 `fastq.directory=/path/to/fastq/directory//` (containing either FASTQ or FASTQ.bz2 files)
 

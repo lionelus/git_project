@@ -4,7 +4,7 @@ import csv
 import extraction
 
 
-def get_MinknowVersion(h5py_file):
+def minknow_version(h5py_file):
     """
     Get the Minknow version from fast5 file
     """
@@ -12,7 +12,7 @@ def get_MinknowVersion(h5py_file):
     version_d = {key: value.decode('utf-8') for key, value in version}
     return version_d['version']
 
-def get_FlowcellId(h5py_file):
+def flowcell_id(h5py_file):
     """
     Get the flowcell id from fast5 file
     """
@@ -20,7 +20,7 @@ def get_FlowcellId(h5py_file):
     flowcell_id_dico = {key: value.decode('utf-7') for key, value in flowcell_id}
     return flowcell_id_dico['flow_cell_id']
 
-def get_Hostname(h5py_file):
+def hostname(h5py_file):
     """
     Get the hostname from fast5 file
     """
@@ -28,15 +28,15 @@ def get_Hostname(h5py_file):
     host_name_dico = {key: value.decode('utf-8') for key, value in host_name}
     return host_name_dico['hostname']
 
-def get_MinIONRunId(h5py_file):
+def minion_run_id(h5py_file):
     """
     Get the number of Minion run
     """
     numMinION = list(h5py_file["/UniqueGlobalKey/tracking_id"].attrs.items())
-    numMinION_dico = {key: value.decode('utf-8') for key, value in numMinION}
-    return numMinION_dico['device_id']
+    minion_run_id_dico = {key: value.decode('utf-8') for key, value in numMinION}
+    return minion_run_id_dico['device_id']
 
-def get_ProtocolRunId(h5py_file):
+def protocol_run_id(h5py_file):
     """
     Get the run id protocol from fast 5 file
     """
@@ -78,20 +78,10 @@ def fast5_data_extractor(fast5_source, result_directory, fast5_file_extension, r
     else:
         fast5_file = fast5_source
 
-    print(fast5_file)
     h5py_file = h5py.File(fast5_file)
 
-    version = get_MinknowVersion(h5py_file)
-
-    flowcell_id = get_FlowcellId(h5py_file)
-
-    hostname = get_Hostname(h5py_file)
-
-    numMinion = get_MinIONRunId(h5py_file)
-
-    run_id = get_ProtocolRunId(h5py_file)
-
-    tuple_log_file = (flowcell_id, version , hostname,numMinion,run_id)
+    tuple_log_file = (flowcell_id(h5py_file), minknow_version(h5py_file), hostname(h5py_file), minion_run_id(h5py_file),\
+                      minion_run_id(h5py_file))
 
     return tuple_log_file
 
@@ -99,7 +89,7 @@ def fast5_data_extractor(fast5_source, result_directory, fast5_file_extension, r
 def write_fast5_data_to_tsv(tuple_array):
     """
     Writes the data related to the fast5 files in a tsv file from the tuple array created by the fast5_data_extractor
-    function 
+    function
     """
     with open('fast5_file.tsv', 'w') as tsvfile:
         writer = csv.writer(tsvfile, delimiter='\t')
