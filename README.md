@@ -65,7 +65,11 @@ To run ToulligQC without Docker, you need to install the following software:
 * seaborn
 * numpy
 
-On Debian/Ubuntu, you can install requirements using the 'apt-get' command, here is an example: $sudo apt-get install matplotlib. If you have ananconda installed you have already these software installed except h5py.
+On Debian/Ubuntu, you can install requirements using the 'apt-get' command, here is an example: 
+
+`$sudo apt-get install matplotlib`
+
+ If you have ananconda installed you have already these software installed except h5py.
 
 <a name="usage"></a>
 ## 2. Usage
@@ -130,7 +134,7 @@ A configuration file can be used, the required informations has to be defined as
 
 `albacore_summary_directory=/path/to/albacore/sequencing/summary/directory/or/file`
 
-`result.directory =/path/to/result/directory/(directory where the results are stored)`
+`result.directory =/path/to/result/directory/(directory where the results are stored)
 
 `fastq.directory=/path/to/fastq/directory//` (containing either FASTQ or FASTQ.bz2 files)
 
