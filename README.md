@@ -4,7 +4,7 @@ This program will produce a set of graphs and statistic files and a report in pd
 
 ## Table of Contents
 
-* 1. [Get ToulligQC](#get-toulligqc)
+* 1.[Get ToulligQC](#get-toulligqc)
   * 1.1 [Docker](#docker)
      *  [Docker image recovery](#docker-image-recovery)
   
@@ -13,7 +13,7 @@ This program will produce a set of graphs and statistic files and a report in pd
      *  [Launching Docker image with docker run](#launching-Docker-image-with docker-run)
      
   * 1.2 [Local installation](#local-installation)
-*	2. [Usage](#usage)
+* 2.[Usage](#usage)
     * 2.1 [Command line](#command-line)
 
       * [Options](#options)
@@ -23,7 +23,7 @@ This program will produce a set of graphs and statistic files and a report in pd
      *  2.2 [Configuration file](#configuration-file)
   
      * 2.3 [Sample sheet for barcoded samples](#sample-sheet-for-barcoded-samples)
-* 3. [Output](#output) 
+* 3.[Output](#output) 
 
 <a name="get-toulligqc"></a>
 ## Get ToulligQC 
